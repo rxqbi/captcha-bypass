@@ -24,4 +24,8 @@ python main.py https://2captcha.com/demo/recaptcha-v2 300 70 recap
 
 
 python main.py https://2captcha.com/demo/recaptcha-v2 300 70 recappx proxy.txt
+
+
+please ask me if you need any help 
+email: rakibrockstar40@gmail.com
            
