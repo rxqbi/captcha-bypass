@@ -116,12 +116,13 @@ def bpt(url, command, readproxy, csay):
     #path = Service('chromedriver.exe')
     driver=webdriver.Chrome( options=options)
     driver.implicitly_wait(3)
+    
+          ###########reCaptcha_solver###########
     if command == "recappx" or command == "recap":
         print("Bypassing ReCAPTCHA")
-        API_KEY="c639136230c07c54851da2b5285900d5"
-        # data_sitekey='6LdkYU4bAAAAAIsagxuFM1f71umVnpzFw0wDldvd'  # 알밤 site_key
-        # data_sitekey='6LcNQGUgAAAAABIT1dd7iE09xTGdRkHbQXn9D8ZY' # 테스트페이지 site_key
-        data_sitekey='6LfD3PIbAAAAAJs_eEHvoOl75_83eXSqpPSRFJ_u'
+        API_KEY="paste your api key here"
+        
+        data_sitekey='paste your site key here'
         page_url=url
         driver.get(page_url)
         api=f"https://2captcha.com/in.php?key={API_KEY}&method=userrecaptcha&googlekey={data_sitekey}&pageurl={page_url}&json=1&invisible=1"
@@ -169,12 +170,10 @@ def bpt(url, command, readproxy, csay):
         ################____hcaptcha_solver___#######################
     if command == "hcappx" or command == "hecap":
         print("Bypassing HCAPTCHA")
-        API_KEY="c639136230c07c54851da2b5285900d5"
-        # data_sitekey='6LdkYU4bAAAAAIsagxuFM1f71umVnpzFw0wDldvd'  # 알밤 site_key
-        # data_sitekey='6LcNQGUgAAAAABIT1dd7iE09xTGdRkHbQXn9D8ZY' # 테스트페이지 site_key
-        #data_sitekey='6LfD3PIbAAAAAJs_eEHvoOl75_83eXSqpPSRFJ_u'
-        data_sitekey='3ceb8624-1970-4e6b-91d5-70317b70b651'
-        #3ceb8624-1970-4e6b-91d5-70317b70b651
+        API_KEY="paste your api key from 2captcha"
+        
+        data_sitekey='paste your site key'
+       
         page_url=url
         driver.get(page_url)
         api=f"https://2captcha.com/in.php?key={API_KEY}&method=hcaptcha&sitekey={data_sitekey}&pageurl={page_url}&json=1&invisible=1"
@@ -231,7 +230,7 @@ def bpt(url, command, readproxy, csay):
 
 
 
-######################################################
+
 
 
 
